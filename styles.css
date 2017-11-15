@@ -2,14 +2,6 @@ html {
   font-family: 'courier';
 }
 
-.buttonRow {
-  background-color: red;
-  position: relative;
-  left: 0;
-  top: 0;
-  height: 30px;
-}
-
 .selectedButton {
   background-color: green;
 }
@@ -22,5 +14,11 @@ html {
 .button {
   margin: 0 0 10px;
   padding: 10px 25px;
+  border: 2px solid green;
   font: normal 20px 'Arial', sans-serif;
+}
+
+.button:focus {
+  background-color: green;
+  color: red;
 }
