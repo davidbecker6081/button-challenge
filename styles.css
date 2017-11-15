@@ -1,0 +1,26 @@
+html {
+  font-family: 'courier';
+}
+
+.buttonRow {
+  background-color: red;
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 30px;
+}
+
+.selectedButton {
+  background-color: green;
+}
+
+#ButtonsGroup {
+  text-align: center;
+  width: 200px;
+}
+
+.button {
+  margin: 0 0 10px;
+  padding: 10px 25px;
+  font: normal 20px 'Arial', sans-serif;
+}
