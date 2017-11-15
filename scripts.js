@@ -29,12 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (e.which === 40) {
       !selectedButton.nextElementSibling
-      ? moveSelectionToBeginning(selectedButton, firstButton)
-      : moveSelectionForward(selectedButton)
+        ? moveSelectionToBeginning(selectedButton, firstButton)
+        : moveSelectionForward(selectedButton)
     } else if (e.which === 38) {
       !selectedButton.previousElementSibling
-      ? moveSelectionToEnd(selectedButton, lastButton)
-      : moveSelectionBackward(selectedButton)
+        ? moveSelectionToEnd(selectedButton, lastButton)
+        : moveSelectionBackward(selectedButton)
     }
   })
 })

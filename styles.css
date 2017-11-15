@@ -17,8 +17,3 @@ html {
   border: 2px solid green;
   font: normal 20px 'Arial', sans-serif;
 }
-
-.button:focus {
-  background-color: green;
-  color: red;
-}
