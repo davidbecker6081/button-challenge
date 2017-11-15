@@ -1,40 +1,36 @@
 const moveSelectionBackward = (selectedButton) => {
-  selectedButton.classList.remove('selectedButton');
-  selectedButton.previousElementSibling.classList.add('selectedButton');
+  selectedButton.previousElementSibling.focus();
 }
 
 const moveSelectionForward = (selectedButton) => {
-  selectedButton.classList.remove('selectedButton');
-  selectedButton.nextElementSibling.classList.add('selectedButton');
+  selectedButton.nextElementSibling.focus();
 }
 
 const moveSelectionToBeginning = (selectedButton, firstButton) => {
-  selectedButton.classList.remove('selectedButton');
-  firstButton.classList.add('selectedButton');
+  firstButton.focus();
 }
 
 const moveSelectionToEnd = (selectedButton, lastButton) => {
-  selectedButton.classList.remove('selectedButton');
-  lastButton.classList.add('selectedButton');
+  lastButton.focus();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   const firstButton = document.querySelector('#ButtonsGroup').firstElementChild;
 
-  firstButton.classList.add('selectedButton');
+  firstButton.focus();
 
   document.addEventListener('keydown', (e) => {
-    const selectedButton = document.getElementsByClassName('selectedButton')[0];
+    const selectedButton = document.querySelector('.button:focus');
     const lastButton = document.querySelector('#ButtonsGroup').lastElementChild;
 
     if (e.which === 40) {
       !selectedButton.nextElementSibling
-      ? moveSelectionToBeginning(selectedButton, firstButton)
-      : moveSelectionForward(selectedButton)
+        ? moveSelectionToBeginning(selectedButton, firstButton)
+        : moveSelectionForward(selectedButton)
     } else if (e.which === 38) {
       !selectedButton.previousElementSibling
-      ? moveSelectionToEnd(selectedButton, lastButton)
-      : moveSelectionBackward(selectedButton)
+        ? moveSelectionToEnd(selectedButton, lastButton)
+        : moveSelectionBackward(selectedButton)
     }
   })
 })

@@ -20,5 +20,5 @@ html {
 
 .button:focus {
   background-color: green;
-  color: red;
+  outline-style: none;
 }
