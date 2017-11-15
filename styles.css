@@ -2,10 +2,6 @@ html {
   font-family: 'courier';
 }
 
-.selectedButton {
-  background-color: green;
-}
-
 #ButtonsGroup {
   text-align: center;
   width: 200px;
@@ -20,5 +16,5 @@ html {
 
 .button:focus {
   background-color: green;
-  color: red;
+  outline-style: none;
 }
